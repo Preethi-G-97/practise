@@ -9,9 +9,8 @@ pipeline {
         stage ('Build') {
             steps {
                 sh '''
-                    cd ./maven/simple-war/
+                    cd .tomcat
                     mvn clean package
-                    cd ./target/
                     ls
                 '''
             }
