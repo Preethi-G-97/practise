@@ -9,9 +9,7 @@ pipeline {
         stage ('Build') {
             steps {
                 sh '''
-                    cd .tomcat
                     mvn clean package
-                    ls
                 '''
             }
         }
