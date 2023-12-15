@@ -15,16 +15,5 @@ pipeline {
                 '''
             }
         }
-
-        stage ('Deploy-Tomcat') {
-            steps {
-                script {
-                    deploy adapters: [tomcat9(credentialsId: 'manager', path: '', url: 'http://52.66.6.250:8080/')], 
-                                     contextPath: '/tomcat/itdefined', 
-                                     war: '/tomcat/itdefined.war'
-                }
-            }
-        }
     }
-
 }
